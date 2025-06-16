@@ -8,9 +8,8 @@ This project demonstrates how a Physics-Informed Neural Network (PINN) can appro
 
 Solve the nonlinear ODE governing pendulum dynamics:
 
-\[
-\frac{d^2\theta}{dt^2} = -\frac{g}{l} \sin(\theta)
-\]
+`$\frac{d^2 \theta}{dt^2} = -\frac{g}{l} \sin(\theta)$`
+
 
 using a deep neural network trained with a physics-informed loss function derived from the equation itself.
 
