@@ -1,0 +1,47 @@
+# 🧠 Solving Nonlinear ODEs with Physics-Informed Neural Networks
+
+This project demonstrates how a Physics-Informed Neural Network (PINN) can approximate the solution to a nonlinear second-order differential equation—specifically, the classic pendulum motion. The model is compared against analytical, Euler, and Runge-Kutta (RK4) solutions.
+
+---
+
+## 🎯 Objective
+
+Solve the nonlinear ODE governing pendulum dynamics:
+
+\[
+\frac{d^2\theta}{dt^2} = -\frac{g}{l} \sin(\theta)
+\]
+
+using a deep neural network trained with a physics-informed loss function derived from the equation itself.
+
+---
+
+## 🧠 Key Features
+
+- 🧮 Physics-informed loss function based on finite difference approximations
+- 📈 Visual comparison of ANN, analytical, RK4, and Euler solutions
+- 🔧 Custom architecture: 4 hidden layers, Sigmoid activations, Adam optimizer
+- 🗂 Modular structure separating model training and plotting
+- 📊 Output PDF for publication-quality visualization
+
+---
+
+## 📂 File Overview
+
+| File                   | Description                                      |
+|------------------------|--------------------------------------------------|
+| `ANN-model.py`         | Trains the neural network with physics-based loss |
+| `PLOT.py`              | Compares ANN vs. analytical, Euler, RK4 (PDF output) |
+| `output_all_methods.pdf` | Final comparison plot                           |
+| `model.pt`             | Trained PyTorch model checkpoint                 |
+| `requirements.txt`     | Dependencies for easy installation               |
+| `main.py` *(optional)* | Alternative combined runner                      |
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository
+2. Install dependencies
+   ```bash
+   pip install -r requirements.txt
